@@ -63,6 +63,12 @@ function logInUser () {
                 myName = snapshot.val().user_name;
                 //拿到friend物件群
                 myFriend = snapshot.val().friend;
+
+                if (!myFriend) {
+                    let noFriend = document.createElement('span');
+                    noFriend.textContent = "Add friends to make colorful life";
+                    document.getElementById('friendList').appendChild(noFriend);
+                } else {
                 //將物件轉換為陣列 偵測到為["-LLTSwSkhMlaiOYZNmhD"...]
                 console.log(Object.keys(myFriend));
                 //轉換為陣列之後可以用index
@@ -125,7 +131,8 @@ function logInUser () {
                 }
                 // console.log(text);
                 // document.querySelector("#friName").innerHTML = text;
-                
+            }
+            //上面這個括號是大判斷式測試friend有沒有清單
 
                 findFriend();
 
