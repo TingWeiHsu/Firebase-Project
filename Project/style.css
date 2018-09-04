@@ -135,3 +135,52 @@ table {
     width: 200px;
 }
 
+#searchFriendEmail{
+    margin-bottom: 10px;
+}
+
+.articleTitle{
+    color: #003459;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0px;
+}
+
+.articleContent {
+    color: #868686;
+    display: block;
+}
+
+.articleTag {
+    color: #007EA7;
+    font-size: 10px;
+    padding: 10px 0px;
+    display: block;
+}
+
+.articleTime {
+    color: #003459;
+    font-size: 10px;
+    display: inline-block;
+    padding: 2px 3px;
+    margin-right: 10px;
+}
+
+.articleAuthor {
+    color: #003459;
+    font-size: 10px;
+    padding: 0px 3px;
+}
+
+.pHr{
+    margin: 10px 0px;
+    width: 50%;
+    border-bottom: 1px solid #007EA7;
+}
+
+.pHr:last-child{
+    margin: 10px 0px;
+    width: 50%;
+    border-bottom: 0px solid #007EA7;
+}
