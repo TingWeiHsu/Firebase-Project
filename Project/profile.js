@@ -291,9 +291,29 @@ function acceptFriendRequest () {
 
 
 
+let articleTitle= document.getElementById("articleTitle");
+let title;
 
+articleTitle.addEventListener('change', (e)=>{
+    title = e.target.value;
+    console.log(title);
+})
 
+let selectTag= document.getElementById("selectTag");
+let tag;
 
+selectTag.addEventListener('change', (e)=>{
+    tag = e.target.value;
+    console.log(tag);
+})
+
+let writeText= document.getElementById("writeText");
+let articleC;
+
+writeText.addEventListener('change', (e)=>{
+    articleC = e.target.value;
+    console.log(articleC);
+})
 
 //點擊 總之開始登陸po文
 textBtn.addEventListener('click',sendPost);
@@ -301,20 +321,36 @@ textBtn.addEventListener('click',sendPost);
 function sendPost () {
     console.log("send article");
     console.log(myEmail);
-    let tag = "八卦";
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var min = today.getMinutes();
+    var hour = today.getHours();
+    var yyyy = today.getFullYear();
+    if(dd<10) {
+        dd = '0'+dd
+    } 
+    if(mm<10) {
+        mm = '0'+mm
+    } 
+    today = yyyy + mm + dd + hour + min ;
+
+
+    //設置那個搜尋
     console.log(`${myEmail}${tag}`)
 
-    // var newArticlerKey = firebase.database().ref().child('posts').push().key;
-    // console.log(newArticleKey);
-    // firebase.database().ref('post/' + newArticlerKey).set({
-    //     article_content : ,
-    //     article_id: newArticlerKey,
-    //     article_tag: ,
-    //     article_title: ,
-    //     author: myEmail,
-    //     author_tag: `${myEmail}${tag}`,
-    //     created_time: 
-    //   });
+    var newArticlerKey = firebase.database().ref().child('posts').push().key;
+    console.log(newArticleKey);
+    firebase.database().ref('post/' + newArticlerKey).set({
+        article_content : articleC,
+        article_id: newArticlerKey,
+        article_tag: tag,
+        article_title: title,
+        author: myEmail,
+        author_tag: `${myEmail}${tag}`,
+        created_time: today
+      });
 }
 
 
