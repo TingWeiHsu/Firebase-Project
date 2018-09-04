@@ -1,0 +1,137 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* reset */
+
+.nav{
+    width: 100%;
+    background-color: #003459;
+    padding: 3%;
+}
+
+.nav> a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    padding-right: 5%;
+}
+
+.nav> a:hover {
+    text-decoration: none;
+    font-size: 16px;
+    color: #00A8E8;
+    padding-right: 5%;
+}
+
+.mainDiv {
+    margin: 0 auto;
+    width: 90%;
+    padding: 5% 0%;
+}
+
+.mainDiv>form> span {
+    display: inline-block;
+    width: 10%;
+}
+
+.mainDiv>h1 {
+    font-size: 20px;
+    color: #007EA7;
+}
+
+.mainDiv>.findFriendForm>form> span {
+    display: inline-block;
+    width: 10%;
+}
+
+.mainDiv>.findFriendForm> h1 {
+    font-size: 20px;
+    color: #007EA7;
+}
+
+.searchResult {
+    padding-left: 11%;
+    display: none;
+}
+
+.logInResult{
+    display: none;
+}
+
+.mainDiv>form> .failInfor {
+    display: none;
+    color: #D62828;
+}
+
+.findFriendForm {
+    display: none;
+}
+
+.oneFriendDiv {
+    padding-bottom: 1%;
+}
+
+.answerNo {
+    color:#D62828;
+    display: inline-block;
+    margin-right: 1%
+}
+
+.answerYes {
+    color:#007EA7;
+    display: inline-block;
+    margin: 0% 1% 0% 2%;
+}
+
+#postArticle {
+    display: none;
+}
+
+#articleTitle{
+    width: 200px;
+}
+

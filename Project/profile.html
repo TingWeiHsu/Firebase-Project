@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="nav">
+                                    <a class="nav-link" href="index.html">Create</a>
+                                    <a class="nav-link" href="profile.html">Profile</a>
+ 
+    </div>
+
+        
+    <div class="mainDiv">
+            <h1 class="logInTitle">Log In Account</h1>
+            <h1 class="logInResult"></h1>
+            <br><br>
+            <!-- <textarea id="mainText" placeholder="testing........"></textarea> -->
+            <form class="logInForm">
+                <span>Your Email:</span>
+                <input type="text" placeholder="Your Email" id="email"/>
+                <input type="button" onclick="logInUser()" value="Log In" id="submitBtn"/>
+                <span class="failInfor">Try again!</span>
+                <br><br>
+            </form>
+
+            <div class="findFriendForm">
+            <br><br>
+            <h1>Find friends</h1>
+            <br><br>
+            <form>
+                <span>Friend Id:</span>
+                <input type="text" placeholder="Search Email" name="search" id="searchMail">
+                <input id="findBtn" type="button" value="Search" />
+                <br><br>
+            </form> 
+        </div>  
+            <div class="searchResult">
+                <span id="showFriendName"> </span>
+                <input type="button" value="AddFriend" id="add"/>
+                <br><br>
+            </div>
+    </div>
+
+    <div class="mainDiv" id="friendList">
+        <h1>Friend List</h1>
+        <br><br>
+    </div>
+    
+
+
+    <div class="mainDiv" id="postArticle">
+        <h1>Write Article</h1>
+        <br><br>
+        <form>
+            <span>Article Title:</span>
+            
+            <input type="text" placeholder="Title" id="articleTitle">
+            <br><br>
+            <textarea placeholder="WriteSomething" id="writeText" rows="4" cols="50"></textarea>
+            <input id="textBtn" type="button" value="Write" />
+        </form>
+    </div>
+
+
+
+
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBzh6acK9gbAoqFUxqK5gLmRxRrTq_MCOg",
+        authDomain: "test-firebase-7198e.firebaseapp.com",
+        databaseURL: "https://test-firebase-7198e.firebaseio.com",
+        projectId: "test-firebase-7198e",
+        storageBucket: "test-firebase-7198e.appspot.com",
+        messagingSenderId: "310741972747"
+      };
+      firebase.initializeApp(config);
+    </script> -->
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyA12jZYXCZWkgzsSWKp-k6LwODxI2GiaRo",
+    authDomain: "appwork-school-ptt.firebaseapp.com",
+    databaseURL: "https://appwork-school-ptt.firebaseio.com",
+    projectId: "appwork-school-ptt",
+    storageBucket: "appwork-school-ptt.appspot.com",
+    messagingSenderId: "688561985073"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="profile.js"></script>
+    
+</body>
+</html>
