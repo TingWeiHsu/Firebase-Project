@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Create Account</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -15,27 +15,38 @@
     </div>
 
         
+
+
+
     <div class="mainDiv">
-            <h1>Create Account</h1>
-            <br><br>
-            <!-- <textarea id="mainText" placeholder="testing........"></textarea> -->
-            <form>
-                <span>Name:</span>
-                <input type="text" id="name"/>
-                <br><br>
-                <span>Email:</span>
-                <input type="text" id="email"/>
-                <br><br>
-                <input type="button" onclick="submitUserData()" value="Submit" id="submitBtn"/>
-                <br><br>
-                
-                    <!-- <input type="text" placeholder="Search Email" name="search" id="searchMail">
-                    <button id="findBtn" type="button">Find friend</button>
-                 -->
-            </form> 
-           
+        <h1>Find Post</h1>
+        <br><br>
+        <form>
+            <input type="text" placeholder="Type Friend's Email " id="searchFriendEmail">
+            <!-- <input id="searchFBtn" type="button" value="Search" /> -->
+            <br>
+        </form>
+        <form>
+            <select id="SearchByTag">
+                <option value="">-</option>
+                <option value="八卦">八卦</option>
+                <option value="就可">就可</option>
+                <option value="生活">生活</option>
+                <option value="表特">表特</option>
+            </select>
+            <input id="searchBtn" type="button" value="Search" />
+        </form>
+        <br><br>
+        <h1>Post Result</h1>
+        <br><br>
+        <div id="showPostResult">
+
+        </div>
     </div>
-    
+
+
+
+
 
     <!-- <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
     <script>
@@ -49,8 +60,6 @@
         messagingSenderId: "310741972747"
       };
       firebase.initializeApp(config);
-
-
     </script> -->
 
 
@@ -69,7 +78,7 @@
   firebase.initializeApp(config);
 </script>
 
-<script src="test.js"></script>
-
+<script src="explore.js"></script>
+    
 </body>
 </html>

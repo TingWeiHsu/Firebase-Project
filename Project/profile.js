@@ -357,114 +357,114 @@ function sendPost () {
 
 
 
-let sByTag= document.getElementById("SearchByTag");
-let search;
+// let sByTag= document.getElementById("SearchByTag");
+// let search;
 
-sByTag.addEventListener('change', (e)=>{
-    search = e.target.value;
-    console.log(search);
-})
+// sByTag.addEventListener('change', (e)=>{
+//     search = e.target.value;
+//     console.log(search);
+// })
 
-searchBtn.addEventListener('click',searchByTag);
+// searchBtn.addEventListener('click',searchByTag);
 
-function searchByTag () {
+// function searchByTag () {
 
-    document.getElementById('showPostResult').innerHTML = "";
+//     document.getElementById('showPostResult').innerHTML = "";
 
-    refp.on('child_added', function(snapshot) {
-        // console.log(snapshot.val().article_tag);
-        if (search === snapshot.val().article_tag) {
-            console.log(snapshot.val().article_content);
-            let myArticleTitle = document.createElement('span');
-            myArticleTitle.textContent = snapshot.val().article_title;
-            myArticleTitle.classList.add("articleTitle");
+//     refp.on('child_added', function(snapshot) {
+//         // console.log(snapshot.val().article_tag);
+//         if (search === snapshot.val().article_tag) {
+//             console.log(snapshot.val().article_content);
+//             let myArticleTitle = document.createElement('span');
+//             myArticleTitle.textContent = snapshot.val().article_title;
+//             myArticleTitle.classList.add("articleTitle");
 
-            let myArticleContent = document.createElement('span');
-            myArticleContent.textContent = snapshot.val().article_content;
-            myArticleContent.classList.add("articleContent");
-            let myArticleTag = document.createElement('span');
-            myArticleTag.textContent = snapshot.val().article_tag;
-            myArticleTag.classList.add("articleTag");
+//             let myArticleContent = document.createElement('span');
+//             myArticleContent.textContent = snapshot.val().article_content;
+//             myArticleContent.classList.add("articleContent");
+//             let myArticleTag = document.createElement('span');
+//             myArticleTag.textContent = snapshot.val().article_tag;
+//             myArticleTag.classList.add("articleTag");
 
-            let myArticleTime = document.createElement('span');
-            myArticleTime.textContent = snapshot.val().created_time;
-            myArticleTime.classList.add("articleTime");
+//             let myArticleTime = document.createElement('span');
+//             myArticleTime.textContent = snapshot.val().created_time;
+//             myArticleTime.classList.add("articleTime");
 
-            let myArticleAuthor = document.createElement('span');
-            myArticleAuthor.textContent = snapshot.val().author;
-            myArticleAuthor.classList.add("articleAuthor");
+//             let myArticleAuthor = document.createElement('span');
+//             myArticleAuthor.textContent = snapshot.val().author;
+//             myArticleAuthor.classList.add("articleAuthor");
 
-            let myHr = document.createElement('p');
-            myHr.classList.add("pHr");
+//             let myHr = document.createElement('p');
+//             myHr.classList.add("pHr");
             
 
-            document.getElementById('showPostResult').appendChild(myArticleTitle);
-            document.getElementById('showPostResult').appendChild(myArticleContent);
-            document.getElementById('showPostResult').appendChild(myArticleTag);
-            document.getElementById('showPostResult').appendChild(myArticleTime);
-            document.getElementById('showPostResult').appendChild(myArticleAuthor);
-            document.getElementById('showPostResult').appendChild(myHr);
-        }
+//             document.getElementById('showPostResult').appendChild(myArticleTitle);
+//             document.getElementById('showPostResult').appendChild(myArticleContent);
+//             document.getElementById('showPostResult').appendChild(myArticleTag);
+//             document.getElementById('showPostResult').appendChild(myArticleTime);
+//             document.getElementById('showPostResult').appendChild(myArticleAuthor);
+//             document.getElementById('showPostResult').appendChild(myHr);
+//         }
 
-    });
+//     });
 
 
-}
+// }
 
-let searchFBtn= document.getElementById("searchFBtn");
+// let searchFBtn= document.getElementById("searchFBtn");
 
-let sByF= document.getElementById("searchFriendEmail");
-let searchF;
+// let sByF= document.getElementById("searchFriendEmail");
+// let searchF;
 
-sByF.addEventListener('change', (e)=>{
-    searchF = e.target.value;
-    console.log(searchF);
-})
+// sByF.addEventListener('change', (e)=>{
+//     searchF = e.target.value;
+//     console.log(searchF);
+// })
 
-searchFBtn.addEventListener('click',searchByFriendEmail);
+// searchFBtn.addEventListener('click',searchByFriendEmail);
 
-function searchByFriendEmail () {
-    console.log(searchF);
-    document.getElementById('showPostResult').innerHTML = "";
+// function searchByFriendEmail () {
+//     console.log(searchF);
+//     document.getElementById('showPostResult').innerHTML = "";
 
-    refp.on('child_added', function(snapshot) {
-        // console.log(snapshot.val().article_tag);
-        if (searchF === snapshot.val().author) {
-            console.log(snapshot.val().article_content);
-            let myArticleTitle = document.createElement('span');
-            myArticleTitle.textContent = snapshot.val().article_title;
-            myArticleTitle.classList.add("articleTitle");
+//     refp.on('child_added', function(snapshot) {
+//         // console.log(snapshot.val().article_tag);
+//         if (searchF === snapshot.val().author) {
+//             console.log(snapshot.val().article_content);
+//             let myArticleTitle = document.createElement('span');
+//             myArticleTitle.textContent = snapshot.val().article_title;
+//             myArticleTitle.classList.add("articleTitle");
 
-            let myArticleContent = document.createElement('span');
-            myArticleContent.textContent = snapshot.val().article_content;
-            myArticleContent.classList.add("articleContent");
-            let myArticleTag = document.createElement('span');
-            myArticleTag.textContent = snapshot.val().article_tag;
-            myArticleTag.classList.add("articleTag");
+//             let myArticleContent = document.createElement('span');
+//             myArticleContent.textContent = snapshot.val().article_content;
+//             myArticleContent.classList.add("articleContent");
+//             let myArticleTag = document.createElement('span');
+//             myArticleTag.textContent = snapshot.val().article_tag;
+//             myArticleTag.classList.add("articleTag");
 
-            let myArticleTime = document.createElement('span');
-            myArticleTime.textContent = snapshot.val().created_time;
-            myArticleTime.classList.add("articleTime");
+//             let myArticleTime = document.createElement('span');
+//             myArticleTime.textContent = snapshot.val().created_time;
+//             myArticleTime.classList.add("articleTime");
 
-            let myArticleAuthor = document.createElement('span');
-            myArticleAuthor.textContent = snapshot.val().author;
-            myArticleAuthor.classList.add("articleAuthor");
+//             let myArticleAuthor = document.createElement('span');
+//             myArticleAuthor.textContent = snapshot.val().author;
+//             myArticleAuthor.classList.add("articleAuthor");
             
-            let myHr = document.createElement('p');
-            myHr.classList.add("pHr");
+//             let myHr = document.createElement('p');
+//             myHr.classList.add("pHr");
 
-            document.getElementById('showPostResult').appendChild(myArticleTitle);
-            document.getElementById('showPostResult').appendChild(myArticleContent);
-            document.getElementById('showPostResult').appendChild(myArticleTag);
-            document.getElementById('showPostResult').appendChild(myArticleTime);
-            document.getElementById('showPostResult').appendChild(myArticleAuthor);
-            document.getElementById('showPostResult').appendChild(myHr);
-        }
+//             document.getElementById('showPostResult').appendChild(myArticleTitle);
+//             document.getElementById('showPostResult').appendChild(myArticleContent);
+//             document.getElementById('showPostResult').appendChild(myArticleTag);
+//             document.getElementById('showPostResult').appendChild(myArticleTime);
+//             document.getElementById('showPostResult').appendChild(myArticleAuthor);
+//             document.getElementById('showPostResult').appendChild(myHr);
+//         }
 
-    });
+//     });
 
 
-}
+// }
 
 
 
