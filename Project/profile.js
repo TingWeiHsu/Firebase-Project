@@ -74,7 +74,7 @@ function logInUser () {
                 //轉換為陣列之後可以用index
                 console.log(Object.keys(myFriend)[0]);
                 //轉換為陣列之後可以用index找出要找得值 偵測到為valid
-                console.log(myFriend[Object.keys(myFriend)[0]]["invite-status"]);
+                console.log(myFriend[Object.keys(myFriend)[0]]["invite_status"]);
                 // let myJSON = JSON.stringify(myFriend);
                 // document.querySelector("#friName").innerHTML = myJSON;
 
@@ -84,7 +84,7 @@ function logInUser () {
                     
                     idbase = Object.keys(myFriend);
                     text = Object.keys(myFriend)[x];
-                    status = myFriend[Object.keys(myFriend)[x]]["invite-status"];
+                    status = myFriend[Object.keys(myFriend)[x]]["invite_status"];
 
                     console.log(text);
 
@@ -198,12 +198,12 @@ function sendToFriendList () {
     console.log(friendKey);
     let myRoot = firebase.database().ref('member/' + myKey + '/' + 'friend');
     myRoot.child(friendKey).set({
-            "invite-status": "pending_send"  
+            "invite_status": "pending_send"  
     });
 
     let myFriendRoot = firebase.database().ref('member/' + friendKey + '/' + 'friend');
     myFriendRoot.child(myKey).set({
-            "invite-status": "pending_confirm"  
+            "invite_status": "pending_confirm"  
     });
 
     window.location.reload();
@@ -287,12 +287,12 @@ function acceptFriendRequest () {
 
     let myRoot = firebase.database().ref('member/' + myKey + '/' + 'friend');
     myRoot.child(thatGuyKey).set({
-            "invite-status": "valid"  
+            "invite_status": "valid"  
     });
 
     let myFriendRoot = firebase.database().ref('member/' + thatGuyKey + '/' + 'friend');
     myFriendRoot.child(myKey).set({
-            "invite-status": "valid"  
+            "invite_status": "valid"  
     });
 
     window.location.reload();
