@@ -12,6 +12,10 @@ To practice how to construct data and deal with data.
 4. Post an article (just like blog)
 5. Search article by tag or by friend(search system)
 
+### Stacks:
+
+HTML, CSS, JavaScript, Firebase data
+
 ### Data Structure:
 
 * member
