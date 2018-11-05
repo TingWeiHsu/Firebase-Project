@@ -1,7 +1,8 @@
-# Practice Firebase Project - Blog
+# Firebase Practice - Small Blog
 
 ### Purpose:
 Design Firebase data structure and use it to make a simple blog with searching system and member system.
+To practice how to construct data and deal with data.
 
 ### Features:
 
