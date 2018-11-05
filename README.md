@@ -1,4 +1,4 @@
-# Practice Firebase Project
+# Practice Firebase Project - Blog
 
 ### Purpose:
 Design Firebase data structure and use it to make a simple blog with searching system and member system.
@@ -13,8 +13,18 @@ Design Firebase data structure and use it to make a simple blog with searching s
 
 ### Data Structure:
 
-memeber
-  system random Id
-post
-  post random Id
-  
+* member
+    * system random Id
+        * friend:
+            * friend's id : true / false
+        * user_email:
+        * user_name:
+* post
+    * post system Id
+        * article_content:
+        * article_id:
+        * article_tag:
+        * article_title:
+        * author:
+        * created_time:
+        
